@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  User_Id: 1
+  Book_Id: 1
+  Comment: MyText
+  Rating: 1
+
+two:
+  User_Id: 1
+  Book_Id: 1
+  Comment: MyText
+  Rating: 1

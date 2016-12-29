@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Title: MyString
+  Description: MyText
+  Page_number: 1
+  Author: MyString
+  Publisher: MyString
+  Status: 1
+  Score: 1.5
+
+two:
+  Title: MyString
+  Description: MyText
+  Page_number: 1
+  Author: MyString
+  Publisher: MyString
+  Status: 1
+  Score: 1.5
