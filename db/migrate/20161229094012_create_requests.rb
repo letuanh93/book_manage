@@ -4,7 +4,7 @@ class CreateRequests < ActiveRecord::Migration[5.0]
       t.integer :User_Id
       t.integer :Book_Id
       t.datetime :Deadline
-      t.integer :Status
+      t.integer :Status, default: 1
 
       t.timestamps
     end

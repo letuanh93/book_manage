@@ -1,0 +1,34 @@
+<% provide :title, "Manage Users" %>
+
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Email</td>
+      <td>Del</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @users.present? %>
+      <% @users.each_with_index do |u, index| %>
+        <tr>
+          <td>
+            <% params[:page] ||= "1" %>
+            <%= get_index params[:page], index, 5 %>
+          </td>
+          <td><%= u.email %></td>
+          <td>
+            <% unless u.is_admin %>
+              <%= link_to "Del", [:admin, u], method: :delete,
+                data: {confirm: "Sure?"} %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="3">No data</td></tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate %>

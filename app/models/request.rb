@@ -1,5 +1,5 @@
 class Request < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
 
-  validates :deadline, presence: true
+  validates :Deadline, presence: true
 end

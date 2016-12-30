@@ -1,0 +1,21 @@
+<%= form_for [:admin, @book] do |f| %>
+  <%# byebug %>
+  <%= f.select :Category_id, options_for_select(@categories.collect{|cate| [cate.Name, cate.id]}, params[:Category_id]) %>
+  <br>
+  <%= f.label :Title %>
+  <%= f.text_field :Title, class: "form-control" %>
+
+  <%= f.label :Description %>
+  <%= f.text_area :Description, rows: 8, class: "form-control" %>
+
+  <%= f.label :Page_number %>
+  <%= f.number_field :Page_number, class: "form-control" %>
+
+  <%= f.label :Author %>
+  <%= f.text_field :Author, class: "form-control" %>
+
+  <%= f.label :Publisher %>
+  <%= f.text_field :Publisher, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary"  %>
+<% end %>
