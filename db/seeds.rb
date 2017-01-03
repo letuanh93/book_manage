@@ -21,3 +21,10 @@ following = users[2..20]
 followers = users[3..20]
 following.each {|followed| user.follow(followed)}
 followers.each {|follower| follower.follow(user)}
+
+30.times do |n|
+	Name = "Category111 #{n+1}"
+	Description = "No #{n+1}"
+	Category.create Name: Name,
+	Description: Description
+end
