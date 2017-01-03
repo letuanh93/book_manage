@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+30.times do |n|
+  name  = "User #{n+1}"
+  email = "example-#{n+1}@railstutorial.org"
+  password = "password"
+  User.create name: name,
+    email: email,
+    password: password,
+    password_confirmation: password
+end
+
+users = User.all
+user  = users.first
+following = users[2..20]
+followers = users[3..20]
+following.each {|followed| user.follow(followed)}
+followers.each {|follower| follower.follow(user)}
