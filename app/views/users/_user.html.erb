@@ -1,0 +1,12 @@
+<% @users.each do |user| %>
+  <div class="col-md-3" id="information_user">
+    <div class="row">
+      <% if user.name.present? %>
+        <%= t "views.users.name" %>: <b><%= user.name %></b>
+      <% else %>
+        <%= t "views.users.name" %>: <b><%= t "views.users.noname" %></b>
+      <% end %><br />
+      <%= t "views.users.email" %>: <b><%= link_to user.email, user %></b>
+    </div>
+  </div>
+<% end %>
