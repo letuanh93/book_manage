@@ -1,0 +1,16 @@
+<div class="row" >
+  <div class="col-md-4" id="user_info">
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
+    <div class="information">
+      <%= render "follow_form" %>
+      <% if @user.name.present? %>
+        <%= t "views.users.name" %>: <b><%= @user.name %></b>
+      <% else %>
+        <%= t "views.users.name" %>: <b><%= t "views.users.noname" %></b>
+      <% end %><br />
+      <%= t "views.users.email" %>: <b><%= @user.email %></b>
+    </div>
+  </div>
+</div>
