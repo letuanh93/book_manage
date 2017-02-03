@@ -1,7 +1,6 @@
 class RelationshipsController < ApplicationController
   before_action :logged_in_user
 
-
   def index
     @user = User.find_by id: params[:user]
     if @user.nil?
