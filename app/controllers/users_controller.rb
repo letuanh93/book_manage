@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
 before_action :load_user, only: [:show, :edit, :update]
   def show
+    
     @followers = current_user.active_relationships.build
     @following = current_user.active_relationships.find_by(followed_id: @user.id)
     # @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).page(params[:page]).per Settings.users.per_page
